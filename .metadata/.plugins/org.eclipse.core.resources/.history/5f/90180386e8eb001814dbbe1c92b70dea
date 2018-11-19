@@ -1,0 +1,20 @@
+package services;
+
+import java.util.ArrayList;
+import modele.Lieu;
+import org.dom4j.*;   
+import org.dom4j.io.*;
+import java.io.*;   
+
+public class ModuleLectureXML {
+	
+	public ModuleLectureXML() {
+		
+	}
+	
+	public ArrayList<Lieu> LectureLivraisonEntrepot(String fileName){
+		ArrayList<Lieu> tempLieus = new ArrayList<Lieu>();
+		
+		return null;
+	}
+}

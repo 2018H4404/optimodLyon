@@ -1,0 +1,34 @@
+package services;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import org.w3c.dom.Document;   
+import org.w3c.dom.NodeList; 
+import javax.xml.parsers.DocumentBuilder;   
+import javax.xml.parsers.DocumentBuilderFactory;   
+
+import modele.Lieu;   
+
+public class ModuleLectureXML {
+	
+	public ModuleLectureXML() {
+		
+	}
+	
+	public ArrayList<Lieu> LectureLivraisonEntrepot(String fileName){
+		ArrayList<Lieu> tempLieus = new ArrayList<Lieu>();  
+		try {   
+			 SAXBuilder builder = new SAXBuilder();   
+			 Document doc = builder.build(new File(fileName));   
+			 Element foo = doc.getRootElement();   
+			 List allChildren = foo.getChildren();   
+			 for (int i = 0; i < allChildren.size(); i++) {   
+			    
+			 }   
+		} catch (Exception e) {   
+			 e.printStackTrace();   
+		}   
+		return null;
+	}
+}

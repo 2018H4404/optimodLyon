@@ -1,0 +1,10 @@
+package modele;
+
+public class Entrepot extends Lieu{
+	protected Heure heureDepart;
+	
+	public Entrepot(long unId) {
+		super(unId);
+	}
+	
+}
