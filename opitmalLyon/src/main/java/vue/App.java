@@ -18,12 +18,12 @@ public class App
     public static void main( String[] args )
     {
     	LieuFactory.initLieuFactory();
-        LecteurDeXML.getInstance().lectureLivraisonEntrepotXML("E:\\PLD AGILE\\TP\\opitmalLyon\\fichiersXML2018\\dl-petit-3.xml");
+        LecteurDeXML.getInstance().lectureLivraisonEntrepotXML("fichiersXML2018/dl-petit-3.xml");
         Collection<Lieu> c = LieuFactory.getAllLieus();
         for(Lieu l : c) {
         	System.out.println(l.toString());
         }
-        Plan p = LecteurDeXML.getInstance().lecturePlanXML("E:\\PLD AGILE\\TP\\opitmalLyon\\fichiersXML2018\\petitPlan.xml");
+        Plan p = LecteurDeXML.getInstance().lecturePlanXML("fichiersXML2018/petitPlan.xml");
         Collection<Noeud> n = p.getNoeuds().values();
         Collection<Troncon> t = p.getTroncons().values();
         for(Noeud tempN : n) {

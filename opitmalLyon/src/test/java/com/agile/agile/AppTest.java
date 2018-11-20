@@ -1,4 +1,4 @@
-package com.zhenyu.zhenyu;
+package com.agile.agile;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

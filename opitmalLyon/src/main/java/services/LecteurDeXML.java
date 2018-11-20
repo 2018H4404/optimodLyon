@@ -34,7 +34,7 @@ public class LecteurDeXML {
 			DocumentBuilder builder = factory.newDocumentBuilder();   
 			Document doc = builder.parse(f);   
 			doc.getDocumentElement().normalize();
-			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+//			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 			NodeList nl = doc.getElementsByTagName("demandeDeLivraisons");   
 			for (int temp = 0; temp < nl.getLength(); temp++) {   
 				Node nNode = nl.item(temp);
@@ -82,7 +82,7 @@ public class LecteurDeXML {
 			DocumentBuilder builder = factory.newDocumentBuilder();   
 			Document doc = builder.parse(f);   
 			doc.getDocumentElement().normalize();
-			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+//			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 			NodeList nl = doc.getElementsByTagName("reseau");   
 			for (int temp = 0; temp < nl.getLength(); temp++) {  
 				boolean first = true;
