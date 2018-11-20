@@ -8,14 +8,14 @@ public class Entrepot extends Lieu{
 		heureDepart = new Heure(h,m,s);
 	}
 	
-	public String GetHeure() {
+	public String getHeure() {
 		return heureDepart.toString();
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		String retour = "{ idAdresse : " + this.GetIdAdresse() + ". heureDpart : " + this.GetHeure() + ". }";
+		String retour = "{ idAdresse : " + this.getIdAdresse() + ". heureDpart : " + this.getHeure() + ". }";
 		return retour;
 	}
 	

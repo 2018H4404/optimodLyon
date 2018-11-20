@@ -7,7 +7,7 @@ public abstract class Lieu {
 		this.idAdresse = unId;
 	}
 	
-	public long GetIdAdresse() {
+	public long getIdAdresse() {
 		return idAdresse;
 	}
 	

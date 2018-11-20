@@ -11,15 +11,15 @@ public class Heure {
 		seconde = s;
 	}
 	
-	public int GetHeure() {
+	public int getHeure() {
 		return heure;
 	}
 	
-	public int GetMinute() {
+	public int getMinute() {
 		return minute;
 	}
 		
-	public int GetSeconde() {
+	public int getSeconde() {
 		return seconde;
 	}
 
