@@ -32,7 +32,7 @@ public class VueGraphique extends Vue{
 	public void dessinerPlan() {
 		tronconGroup.getChildren().clear();
 		noeudGroup.getChildren().clear();
-		Collection<Intersection> lesNoeuds = monPlan.getAllNoeuds();
+		Collection<Intersection> lesNoeuds = monPlan.getAllIntersections();
 		Collection<Troncon> lesTroncons = monPlan.getAllTroncons();
 		System.out.println(lesNoeuds.size());
 		System.out.println(lesTroncons.size());
@@ -41,8 +41,8 @@ public class VueGraphique extends Vue{
 			noeudGroup.getChildren().add(tempPoint);
 		}
 		for(Troncon troncon : lesTroncons) {
-			Intersection depart = monPlan.getNoeud(troncon.getOrigine());
-			Intersection destination = monPlan.getNoeud(troncon.getDestination());
+			Intersection depart = monPlan.getIntersection(troncon.getOrigine());
+			Intersection destination = monPlan.getIntersection(troncon.getDestination());
 			TronconVue tempLigne = new TronconVue(monPlan.transformLongitude(depart.getLongitude(), largeur),monPlan.transformLatitude(depart.getLatitude(), hauteur),
 													monPlan.transformLongitude(destination.getLongitude(), largeur),monPlan.transformLatitude(destination.getLatitude(), hauteur),troncon.getNomRue());
 			tronconGroup.getChildren().add(tempLigne);

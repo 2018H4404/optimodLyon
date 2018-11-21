@@ -30,7 +30,7 @@ public class Plan {
 		this.troncons.clear();
 	}
 	
-	public Intersection getNoeud(long id) {
+	public Intersection getIntersection(long id) {
 		return this.intersections.get(id);
 	}
 	
@@ -38,11 +38,11 @@ public class Plan {
 		return this.troncons.get(origine);
 	}
 
-	public HashMap<Long, Intersection> getNoeuds() {
+	public HashMap<Long, Intersection> getIntersections() {
 		return intersections;
 	}
 	
-	public Collection<Intersection> getAllNoeuds() {
+	public Collection<Intersection> getAllIntersections() {
 		return intersections.values();
 	}
 	
@@ -50,7 +50,7 @@ public class Plan {
 		return troncons.values();
 	}
 
-	public void setNoeuds(HashMap<Long, Intersection> intersections) {
+	public void setIntersections(HashMap<Long, Intersection> intersections) {
 		this.intersections = intersections;
 	}
 	

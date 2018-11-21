@@ -24,7 +24,7 @@ public class App
         	System.out.println(l.toString());
         }
         Plan p = LecteurDeXML.getInstance().lecturePlanXML("fichiersXML2018/petitPlan.xml");
-        Collection<Intersection> n = p.getNoeuds().values();
+        Collection<Intersection> n = p.getIntersections().values();
         Collection<Troncon> t = p.getTroncons().values();
         for(Intersection tempN : n) {
         	System.out.println(tempN.toString());
