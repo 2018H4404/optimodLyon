@@ -12,7 +12,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import modele.Noeud;
+import modele.Intersection;
 import modele.Plan;
 import modele.Troncon;
 
@@ -70,7 +70,7 @@ public class LecteurDeXML {
 	}
 
 	public Plan lecturePlanXML(String fileName) {
-		HashMap<Long,Noeud> tempNoeuds = new HashMap<Long,Noeud>();  
+		HashMap<Long,Intersection> tempNoeuds = new HashMap<Long,Intersection>();  
 		IdentityHashMap<Long,Troncon> tempTroncons = new IdentityHashMap<Long,Troncon>();
 		double maxLong = 0;
 		double maxLat = 0;
@@ -95,7 +95,7 @@ public class LecteurDeXML {
 						if (child.getNodeType() == Node.ELEMENT_NODE) {
 							Element elemChild = (Element) child;
 							if(elemChild.getTagName().equals("noeud")) {
-								Noeud tempNoeud = null;
+								Intersection tempNoeud = null;
 								long tempId = Long.parseUnsignedLong(elemChild.getAttribute("id"));
 								double tempLatitude = Double.parseDouble(elemChild.getAttribute("latitude"));
 								double tempLongitude = Double.parseDouble(elemChild.getAttribute("longitude"));
@@ -117,7 +117,7 @@ public class LecteurDeXML {
 										minLat = tempLatitude;
 									}
 								}
-								tempNoeud = new Noeud(tempId,tempLatitude,tempLongitude);
+								tempNoeud = new Intersection(tempId,tempLatitude,tempLongitude);
 								tempNoeuds.put(tempId, tempNoeud);
 							}else if(elemChild.getTagName().equals("troncon")) {
 								Troncon tempTroncon = null;

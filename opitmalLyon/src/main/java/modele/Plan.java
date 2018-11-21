@@ -6,7 +6,7 @@ import java.util.IdentityHashMap;
 
 public class Plan {
 
-	protected HashMap<Long,Noeud> noeuds;
+	protected HashMap<Long,Intersection> intersections;
 	protected IdentityHashMap<Long,Troncon> troncons;
 	protected double maxLong;
 	protected double minLong;
@@ -14,10 +14,10 @@ public class Plan {
 	protected double minLat;
 	
 	
-	public Plan(HashMap<Long, Noeud> noeuds, IdentityHashMap<Long, Troncon> troncons, double maxLong, double minLong,
+	public Plan(HashMap<Long, Intersection> intersections, IdentityHashMap<Long, Troncon> troncons, double maxLong, double minLong,
 			double maxLat, double minLat) {
 		super();
-		this.noeuds = noeuds;
+		this.intersections = intersections;
 		this.troncons = troncons;
 		this.maxLong = maxLong;
 		this.minLong = minLong;
@@ -26,32 +26,32 @@ public class Plan {
 	}
 
 	public void clear() {
-		this.noeuds.clear();
+		this.intersections.clear();
 		this.troncons.clear();
 	}
 	
-	public Noeud getNoeud(long id) {
-		return this.noeuds.get(id);
+	public Intersection getNoeud(long id) {
+		return this.intersections.get(id);
 	}
 	
 	public Troncon getTroncon(long origine) {
 		return this.troncons.get(origine);
 	}
 
-	public HashMap<Long, Noeud> getNoeuds() {
-		return noeuds;
+	public HashMap<Long, Intersection> getNoeuds() {
+		return intersections;
 	}
 	
-	public Collection<Noeud> getAllNoeuds() {
-		return noeuds.values();
+	public Collection<Intersection> getAllNoeuds() {
+		return intersections.values();
 	}
 	
 	public Collection<Troncon> getAllTroncons() {
 		return troncons.values();
 	}
 
-	public void setNoeuds(HashMap<Long, Noeud> noeuds) {
-		this.noeuds = noeuds;
+	public void setNoeuds(HashMap<Long, Intersection> intersections) {
+		this.intersections = intersections;
 	}
 	
 	public IdentityHashMap<Long, Troncon> getTroncons() {

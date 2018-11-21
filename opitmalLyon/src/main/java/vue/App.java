@@ -3,7 +3,7 @@ package vue;
 import java.util.Collection;
 
 import modele.Lieu;
-import modele.Noeud;
+import modele.Intersection;
 import modele.Plan;
 import modele.Troncon;
 import services.LecteurDeXML;
@@ -24,9 +24,9 @@ public class App
         	System.out.println(l.toString());
         }
         Plan p = LecteurDeXML.getInstance().lecturePlanXML("fichiersXML2018/petitPlan.xml");
-        Collection<Noeud> n = p.getNoeuds().values();
+        Collection<Intersection> n = p.getNoeuds().values();
         Collection<Troncon> t = p.getTroncons().values();
-        for(Noeud tempN : n) {
+        for(Intersection tempN : n) {
         	System.out.println(tempN.toString());
         }
         for(Troncon tempT : t) {

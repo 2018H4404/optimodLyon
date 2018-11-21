@@ -1,12 +1,12 @@
 package modele;
 
-public class Noeud {
+public class Intersection {
 
 	protected long id;
 	protected double latitude;
 	protected double longitude;
 	
-	public Noeud(long id, double latitude, double longitude) {
+	public Intersection(long id, double latitude, double longitude) {
 		this.id = id;
 		this.latitude = latitude;
 		this.longitude = longitude;

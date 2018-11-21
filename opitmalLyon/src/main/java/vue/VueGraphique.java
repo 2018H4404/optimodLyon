@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Observable;
 
 import javafx.scene.*;
-import modele.Noeud;
+import modele.Intersection;
 import modele.Plan;
 import modele.Troncon;
 
@@ -32,17 +32,17 @@ public class VueGraphique extends Vue{
 	public void dessinerPlan() {
 		tronconGroup.getChildren().clear();
 		noeudGroup.getChildren().clear();
-		Collection<Noeud> lesNoeuds = monPlan.getAllNoeuds();
+		Collection<Intersection> lesNoeuds = monPlan.getAllNoeuds();
 		Collection<Troncon> lesTroncons = monPlan.getAllTroncons();
 		System.out.println(lesNoeuds.size());
 		System.out.println(lesTroncons.size());
-		for(Noeud noeud : lesNoeuds) {
-			PointNoeud tempPoint = new PointNoeud(monPlan.transformLongitude(noeud.getLongitude(), largeur),monPlan.transformLatitude(noeud.getLatitude(), hauteur),5,noeud.getId());
+		for(Intersection intersection : lesNoeuds) {
+			PointNoeud tempPoint = new PointNoeud(monPlan.transformLongitude(intersection.getLongitude(), largeur),monPlan.transformLatitude(intersection.getLatitude(), hauteur),5,intersection.getId());
 			noeudGroup.getChildren().add(tempPoint);
 		}
 		for(Troncon troncon : lesTroncons) {
-			Noeud depart = monPlan.getNoeud(troncon.getOrigine());
-			Noeud destination = monPlan.getNoeud(troncon.getDestination());
+			Intersection depart = monPlan.getNoeud(troncon.getOrigine());
+			Intersection destination = monPlan.getNoeud(troncon.getDestination());
 			LigneTroncon tempLigne = new LigneTroncon(monPlan.transformLongitude(depart.getLongitude(), largeur),monPlan.transformLatitude(depart.getLatitude(), hauteur),
 													monPlan.transformLongitude(destination.getLongitude(), largeur),monPlan.transformLatitude(destination.getLatitude(), hauteur),troncon.getNomRue());
 			tronconGroup.getChildren().add(tempLigne);
