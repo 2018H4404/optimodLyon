@@ -162,7 +162,7 @@ public class ApplicationDemo extends Application{
 	}
 	
 	public static void main(String[] args) {
-        //launch(args);
+        launch(args);
 		/*PriorityQueue<Paire> queue = new PriorityQueue<Paire>(1,
 				new Comparator<Paire>() {  
 	                  public int compare(Paire p1, Paire p2) {  

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 2 elements to &apos;opitmodLyon/src/main/java/modele&apos;&#x0D;&#x0A;- Original project: &apos;src&apos;&#x0D;&#x0A;- Destination element: &apos;opitmodLyon/src/main/java/modele&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     modele.TourneeManager.java&#x0D;&#x0A;     modele.Tournee.java" description="Copy compilation units" destination="=opitmodLyon/src\/main\/java&lt;modele" element1="/main\/java&lt;modele{TourneeManager.java" element2="/main\/java&lt;modele{Tournee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1543068252512" units="2" version="1.0"/>
-</session>

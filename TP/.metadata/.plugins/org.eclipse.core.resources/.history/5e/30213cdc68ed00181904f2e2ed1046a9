@@ -1,7 +1,0 @@
-package controleur;
-
-import modele.Plan;
-
-public class controleur {
-	public static Plan monPlan;
-}
