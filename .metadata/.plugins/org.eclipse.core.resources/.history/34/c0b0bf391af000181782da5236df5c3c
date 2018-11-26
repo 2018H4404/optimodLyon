@@ -1,0 +1,12 @@
+package vue;
+
+import javafx.scene.paint.Color;
+import modele.Entrepot;
+
+public class EntrepotVue {
+	
+	private double idEntrepot;
+	
+	
+	
+}

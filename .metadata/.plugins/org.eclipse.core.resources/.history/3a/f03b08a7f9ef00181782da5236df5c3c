@@ -1,0 +1,46 @@
+package services;
+
+import java.util.Collection;
+import java.util.HashMap;
+
+import modele.Entrepot;
+import modele.Lieu;
+import modele.PointLivraison;
+
+public class LieuFactory {
+	
+	private static HashMap<Long,Entrepot> entrepots;
+	private static HashMap<Long,PointLivraison> livraisons;
+	
+	public static void initLieuFactory() {
+		entrepots = new HashMap<Long,Entrepot>();
+		livraisons = new HashMap<Long,PointLivraison>();
+	}
+	
+	public static void ajouterEntrepot(long tempId,int heure,int minute,int seconde) {
+		Entrepot tempObject = new Entrepot(tempId,heure,minute,seconde);
+		entrepots.put(tempId,tempObject);
+	}
+	
+	public static void ajouterPointLivraison(long tempId,int duree) {
+		PointLivraison tempObject = new PointLivraison(tempId,duree);
+		livraisons.put(tempId,tempObject);
+	}
+	
+	public static void clear() {
+		livraisons.clear();
+		entrepots.clear();
+	}
+	
+	public static Entrepot getEntrepotParId(long id) {
+		return entrepots.get(id);
+	}
+	
+	public static PointLivraison getPointLivraisonParId(long id) {
+		return livraisons.get(id);
+	}
+	
+	public static Collection<Lieu> getAllLieus(){
+		return lieus.values();
+	}
+}

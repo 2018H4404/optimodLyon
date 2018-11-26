@@ -1,0 +1,10 @@
+package vue;
+
+import javafx.scene.paint.Color;
+import modele.Entrepot;
+import modele.IntersectionNormal;
+
+public class EntrepotVue {
+
+	
+}

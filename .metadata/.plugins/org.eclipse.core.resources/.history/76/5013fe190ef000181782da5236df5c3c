@@ -1,0 +1,32 @@
+package services;
+
+import java.util.Collection;
+import java.util.HashMap;
+
+import modele.Intersection;
+import modele.PointLivraison;
+
+public class PointLivraisonFactory {
+	private static HashMap<Long,PointLivraison> livraisons;
+	
+	public static void initPointLivraisonFactory() {
+		livraisons = new HashMap<Long,PointLivraison>();
+	}
+	
+	public static void ajouterPointLivraison(Intersection unInter,int duree) {
+		PointLivraison tempObject = new PointLivraison(unInter,duree);
+		livraisons.put(unInter.getId(),tempObject);
+	}
+	
+	public static void clear() {
+		livraisons.clear();
+	}
+	
+	public static PointLivraison getPointLivraisonParId(long id) {
+		return livraisons.get(id);
+	}
+	
+	public static Collection<PointLivraison> getAllPointLivraisons(){
+		return livraisons.values();
+	}
+}

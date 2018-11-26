@@ -1,0 +1,22 @@
+package modele;
+
+import org.joda.time.DateTime;
+
+public class Entrepot extends Intersection{
+	protected DateTime heureDepart;
+	protected DateTime heureArrivee;
+	
+	public Entrepot(long unId, int h, int m, int s) {
+		super(unId, h, m , s);
+	}
+
+	@Override
+	public String toString() {
+		return "Entrepot [idAdresse=" + idAdresse + ", heureDepart=" + heureDepart + ", heureArrivee=" + heureArrivee
+				+ "]";
+	}
+
+	
+	
+	
+}
