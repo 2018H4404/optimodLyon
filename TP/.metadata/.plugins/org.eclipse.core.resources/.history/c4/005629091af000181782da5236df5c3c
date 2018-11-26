@@ -1,0 +1,25 @@
+package vue;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import modele.IntersectionNormal;
+
+@SuppressWarnings("restriction")
+public class IntersectionNormalVue extends Circle{
+	
+	private IntersectionNormal monInter;
+	
+	public IntersectionNormalVue(double x, double y, double radius, IntersectionNormal unInter) {
+		super(x,y,radius);
+		this.setFill(Color.BLUE);
+		monInter = unInter;
+	}
+	
+	public double getLat() {
+		return monInter.getLatitude();
+	}
+	
+	public double getLong() {
+		return monInter.getLongitude();
+	}
+}

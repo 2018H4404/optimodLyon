@@ -1,0 +1,13 @@
+package vue;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+
+@SuppressWarnings("restriction")
+public class PointNoeud extends Circle{
+	private long idNoeud;
+	
+	public PointNoeud(int x, int y, int raidus, long id) {
+		
+	}
+}

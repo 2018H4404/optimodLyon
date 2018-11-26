@@ -1,0 +1,36 @@
+package modele;
+
+import org.joda.time.DateTime;
+
+public abstract class Lieu {
+	protected long idAdresse;
+	protected DateTime heureDepart;
+	protected DateTime heureArrivee;
+	
+	public Lieu(long unId) {
+		this.idAdresse = unId;
+		this.heureArrivee = null;
+		this.heureDepart = null;
+	}
+	
+	public Lieu(long unId,int heure,int minute,int seconde) {
+		this.idAdresse = unId;
+		this.heureDepart = new DateTime(2018,3,30,heure,minute,seconde);
+		this.heureArrivee = null;
+		
+	}
+	
+	public long getIdAdresse() {
+		return idAdresse;
+	}
+	
+	public int getHeure() {
+		return this.heureDepart.getHourOfDay();
+	}
+	
+	public int getMinute() {
+		return this.heureDepart.getMinuteOfHour();
+	}
+	
+	public abstract String toString();
+}

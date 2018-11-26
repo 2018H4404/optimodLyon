@@ -1,0 +1,69 @@
+package services;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.w3c.dom.Document;   
+import org.w3c.dom.NodeList; 
+import org.w3c.dom.Node; 
+import org.w3c.dom.Element;
+import javax.xml.parsers.DocumentBuilder;   
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import modele.Entrepot;
+import modele.Lieu;   
+
+public class ModuleLectureXML {
+	
+	public ModuleLectureXML() {
+		
+	}
+	
+	public ArrayList<Lieu> LectureLivraisonEntrepot(String fileName){
+		ArrayList<Lieu> tempLieus = new ArrayList<Lieu>();  
+		try {   
+			File f = new File(fileName);   
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();   
+			DocumentBuilder builder = factory.newDocumentBuilder();   
+			Document doc = builder.parse(f);   
+			doc.getDocumentElement().normalize();
+			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+			NodeList nl = doc.getElementsByTagName("demandeDeLivraisons");   
+			for (int temp = 0; temp < nl.getLength(); temp++) {   
+				Node nNode = nl.item(temp);
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+					NodeList children = nNode.getChildNodes();
+					int nbChildren = children.getLength();
+					for(int i = 0; i < nbChildren; i++) {
+						Node child = children.item(i);
+						if (child.getNodeType() == Node.ELEMENT_NODE) {
+							Element elemChild = (Element) child;
+							Lieu tempObject = null;
+							if(elemChild.getTagName().equals("entrepot")) {
+								int tempId = Integer.parseInt(elemChild.getAttribute("adresse"));
+								String heureDepart = elemChild.getAttribute("heureDepart");
+								String[] times= heureDepart.split(":");
+								int heure = Integer.parseInt(times[0]);
+								int minute = Integer.parseInt(times[1]);
+								int seconde = Integer.parseInt(times[2]);
+								tempObject = new Entrepot(tempId,heure,minute,seconde);
+								tempLieus.add(tempObject);
+							}else if(elemChild.getTagName().equals("livraison")) {
+								int tempId = Integer.parseInt(elemChild.getAttribute("adresse"));
+								int duree = Integer.parseInt(elemChild.getAttribute("duree"));
+								tempObject = new Entrepot(tempId,duree);
+								tempLieus.add(tempObject);
+							}else {
+								
+							}
+						}
+					}
+				}
+		    }   
+		    } catch (Exception e) {   
+			    e.printStackTrace();   
+		    }    
+		return null;
+	}
+}

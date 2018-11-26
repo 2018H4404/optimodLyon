@@ -1,0 +1,10 @@
+package services;
+
+import java.util.ArrayList;
+
+import modele.Noeud;
+
+public class NoeudFactory {
+	private ArrayList<Noeud> noeuds;
+	
+}

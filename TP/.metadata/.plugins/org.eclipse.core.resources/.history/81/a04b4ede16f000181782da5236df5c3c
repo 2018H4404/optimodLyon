@@ -1,0 +1,8 @@
+package modele;
+
+public class IntersectionNormal extends Intersection{
+
+	
+	
+	
+}
