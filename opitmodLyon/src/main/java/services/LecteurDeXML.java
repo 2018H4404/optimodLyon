@@ -42,7 +42,7 @@ public class LecteurDeXML {
 			for (int temp = 0; temp < nl.getLength(); temp++) {   
 				Node nNode = nl.item(temp);
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					NodeList children = nNode.getChildNodes();
+					NodeList children = nNode.getChildNodes(); 
 					int nbChildren = children.getLength();
 					for(int i = 0; i < nbChildren; i++) {
 						Node child = children.item(i);
@@ -91,7 +91,7 @@ public class LecteurDeXML {
 			doc.getDocumentElement().normalize();
 			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 			NodeList nl = doc.getElementsByTagName("reseau");   
-			for (int temp = 0; temp < nl.getLength(); temp++) {  
+			for (int temp = 0; temp < nl.getLength(); temp++) {   
 				boolean first = true;
 				Node nNode = nl.item(temp);
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -127,7 +127,7 @@ public class LecteurDeXML {
 								tempIntersection = new IntersectionNormal(tempId,tempLatitude,tempLongitude);
 								tempIntersections.put(tempId, tempIntersection);
 							}else if(elemChild.getTagName().equals("troncon")) {
-								Troncon tempTroncon = null;
+								Troncon tempTroncon = null; 
 								long idDest = Long.parseUnsignedLong(elemChild.getAttribute("destination"));
 								double longueur = Double.parseDouble(elemChild.getAttribute("longueur"));
 								String nomRue = elemChild.getAttribute("nomRue");
@@ -159,7 +159,7 @@ public class LecteurDeXML {
 	}
 	
 	
-	public void setLatLongDesTroncons(HashMap<Long,IntersectionNormal> tempIntersections, HashMap<Long,ArrayList<Troncon>> tempTroncons) {
+	private void setLatLongDesTroncons(HashMap<Long,IntersectionNormal> tempIntersections, HashMap<Long,ArrayList<Troncon>> tempTroncons) {
 		for(HashMap.Entry<Long,ArrayList<Troncon>> entry: tempTroncons.entrySet())
         {
 			for(Troncon c : entry.getValue()) {

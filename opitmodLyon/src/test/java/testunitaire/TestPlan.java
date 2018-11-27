@@ -1,5 +1,5 @@
 package testunitaire;
 
-public class PlanTest {
+public class TestPlan {
 
 }

@@ -20,8 +20,16 @@ public class DemandeLivraison extends Observable{
 		}
 		this.livraisons = livraisons;
 		this.entrepots = entrepots;
-		setChanged();
+		setChanged(); 
 		notifyObservers("DemandeLivraison");
+	}
+	
+	public HashMap<Long,PointLivraison> getLivraisons(){
+		return livraisons;
+	}
+	
+	public HashMap<Long,Entrepot> getEntrepots(){
+		return entrepots;
 	}
 	
 	public void ajouterEntrepot(long id, double latitude, double longitude,int heure,int minute,int seconde) {
