@@ -1,0 +1,9 @@
+package controleur;
+
+import modele.DemandeLivraison;
+import modele.Plan;
+
+public class Controleur {
+	public static Plan monPlan;
+	public static DemandeLivraison maDemande;
+}

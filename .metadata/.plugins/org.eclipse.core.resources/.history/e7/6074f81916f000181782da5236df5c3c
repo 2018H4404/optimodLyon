@@ -1,0 +1,15 @@
+package vue;
+
+import javafx.scene.paint.Color;
+import modele.Intersection;
+
+public class EntrepotVue {
+
+	private Entrepot monInter;
+	
+	public IntersectionVue(double x, double y, double radius, Intersection unInter) {
+		super(x,y,radius);
+		this.setFill(Color.BLUE);
+		monInter = unInter;
+	}
+}

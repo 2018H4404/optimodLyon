@@ -1,0 +1,22 @@
+package services;
+
+import java.util.ArrayList;
+
+import modele.Lieu;
+
+public class LieuFactory {
+	
+	private static ArrayList<Lieu> lieus;
+	
+	public static void InitLieuFactory() {
+		lieus = new ArrayList<Lieu>();
+	}
+	
+	public static void AjouterEntrepot() {
+		
+	}
+	
+	public static void AjouterPointLivraison() {
+		
+	}
+}

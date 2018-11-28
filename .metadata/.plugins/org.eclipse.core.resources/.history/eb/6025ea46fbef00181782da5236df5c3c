@@ -1,0 +1,11 @@
+package services;
+
+import java.util.Collection;
+import java.util.HashMap;
+
+import modele.Entrepot;
+import modele.PointLivraison;
+
+public class PointLivraisonFactory {
+	private static HashMap<Long,PointLivraison> livraisons;
+}

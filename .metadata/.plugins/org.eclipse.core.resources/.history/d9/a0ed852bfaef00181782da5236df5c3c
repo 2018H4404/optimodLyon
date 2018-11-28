@@ -1,0 +1,18 @@
+package modele;
+
+public class Entrepot extends Lieu{
+	
+	public Entrepot(long unId, int h, int m, int s) {
+		super(unId, h, m , s);
+	}
+
+	@Override
+	public String toString() {
+		return "Entrepot [idAdresse=" + idAdresse + ", heureDepart=" + heureDepart + ", heureArrivee=" + heureArrivee
+				+ "]";
+	}
+
+	
+	
+	
+}

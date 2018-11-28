@@ -1,0 +1,20 @@
+package services;
+
+import java.util.Collection;
+import java.util.HashMap;
+
+import modele.Entrepot;
+import modele.PointLivraison;
+
+public class EntrepotFactory {
+	private static HashMap<Long,Entrepot> entrepots;
+	
+	public static void initEntrepotFactory() {
+		entrepots = new HashMap<Long,Entrepot>();
+	}
+	
+	public static void ajouterEntrepot(long tempId,int heure,int minute,int seconde) {
+		Entrepot tempObject = new Entrepot(tempId,heure,minute,seconde);
+		entrepots.put(tempId,tempObject);
+	}
+}

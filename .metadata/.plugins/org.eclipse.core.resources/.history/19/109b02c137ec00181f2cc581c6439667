@@ -1,0 +1,6 @@
+package services;
+
+public class LieuFactory {
+	
+	private static ArrayList<Lieu> lieus;
+}
