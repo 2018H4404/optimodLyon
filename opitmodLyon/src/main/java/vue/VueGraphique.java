@@ -32,8 +32,8 @@ public class VueGraphique extends Parent implements Observer{
 	private Group livraisonGroup;
 	private Group tourneeGroup;
 	private VueTextuelle compagnie;
-	private static double hauteur = 800;
-	private static double largeur = 800;
+	private static double hauteur = 600;
+	private static double largeur = 600;
 	
 	public VueGraphique() {
 		//Intialisation de sa compagnie par defaut
@@ -164,8 +164,5 @@ public class VueGraphique extends Parent implements Observer{
 				break;	
 				
 		}
-		
 	}
-
-	
 }
