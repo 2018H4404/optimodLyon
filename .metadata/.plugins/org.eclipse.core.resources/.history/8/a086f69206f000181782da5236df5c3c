@@ -1,8 +1,0 @@
-package modele;
-
-import java.util.HashMap;
-
-public class demandeLivraison {
-	private HashMap<Long,PointLivraison> livraisons;
-	private HashMap<Long,Entrepot> entrepots;
-}
