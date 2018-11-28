@@ -34,6 +34,10 @@ public abstract class TemplateTSP implements TSP {
 		return coutMeilleureSolution;
 	}
 	
+	public void arreterCalcul(Boolean valeur) {
+		
+	}
+	
 	/**
 	 * Methode devant etre redefinie par les sous-classes de TemplateTSP
 	 * @param sommetCourant
@@ -88,6 +92,6 @@ public abstract class TemplateTSP implements TSP {
 	        	nonVus.add(prochainSommet);
 	        }	    
 	    }
-	}
+	}	 
 }
 
